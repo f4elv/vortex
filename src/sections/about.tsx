@@ -8,42 +8,21 @@ export default function About() {
   const { ref, isVisible } = useInView(0.5);
 
   return (
-    <section
-      id="About"
-      ref={ref}
-      className="
-        relative w-full min-h-screen
-        px-6 sm:px-10 md:px-20 lg:px-32
-        py-8
-        flex flex-col items-center justify-center
-        overflow-hidden
-      "
-    >
+    <section id="About" ref={ref} className="relative w-full min-h-screen px-6 sm:px-10 md:px-20 lg:px-32 py-8 flex flex-col items-center justify-center overflow-hidden">
       <Blur />
-
-      {/* Cabeçalho */}
-      <div
-        className={`
-          text-center max-w-3xl mx-auto transition-all duration-1000
-          ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
-        `}
-      >
+      <div className={`text-center max-w-3xl mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
         <p className="text-xs sm:text-sm tracking-widest text-purple-600 mb-3">
           Valores • Visão • Método
         </p>
-
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold">
           Superfícies mínimas. Máxima presença.
         </h1>
-
         <p className="mt-6 leading-relaxed text-base sm:text-lg">
           Na Vortex, acreditamos que design é movimento — uma comunicação viva,
           precisa e emocional. Unimos direção criativa com engenharia de performance
-          para construir experiências rápidas, acessíveis e profundamente imersivas.
+          para construir experiências rápidas, acessíveis e profundamente interativas.
         </p>
       </div>
-
-      {/* Cartões */}
       <div
         className={`
           w-full max-w-6xl
@@ -53,7 +32,6 @@ export default function About() {
           ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
         `}
       >
-        {/* Card 1 */}
         <div className="
           bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-md
           hover:bg-white/10 transition group relative overflow-hidden
@@ -68,14 +46,10 @@ export default function About() {
             Refinamos cada detalhe, removemos fricções e deixamos a intenção guiar cada interação.
           </p>
         </div>
-
-        {/* Card 2 */}
         <div className="
           bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-md
           hover:bg-white/10 transition group relative overflow-hidden
         ">
-          <div className="absolute inset-0 bg-purple-600/10 opacity-0 group-hover:opacity-20 transition"></div>
-
           <p className="text-sm tracking-wide text-purple-600 font-bold mb-2">
             Visão
           </p>
@@ -86,26 +60,21 @@ export default function About() {
             Acreditamos em interfaces vivas — guiadas por movimento, contexto e expressão visual.
           </p>
         </div>
-
-        {/* Card 3 */}
         <div className="
           bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-md
           hover:bg-white/10 transition group relative overflow-hidden
         ">
-          <div className="absolute inset-0 bg-purple-600/10 opacity-0 group-hover:opacity-20 transition"></div>
-
           <p className="text-sm tracking-wide text-purple-600 font-bold mb-2">
             Método
           </p>
           <h3 className="text-xl sm:text-2xl font-bold mb-3">
-            Aparência × Performance
+            Aparência x Performance
           </h3>
           <p className="leading-relaxed">
             Do conceito à produção, afinamos performance enquanto moldamos uma estética única e memorável.
           </p>
         </div>
       </div>
-
       <Light />
     </section>
   );
