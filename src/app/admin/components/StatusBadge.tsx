@@ -3,8 +3,8 @@ export function StatusBadge({ status }: { status: string }) {
     NOVO: "bg-green-600",
     RESPONDIDO: "bg-blue-600",
     EM_ANDAMENTO: "bg-yellow-600",
-    CANCELAMENTO: "bg-red-600",
     FINALIZADO: "bg-purple-600",
+    CANCELADO: "bg-red-600",
   };
 
   return (

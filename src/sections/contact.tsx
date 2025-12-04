@@ -31,6 +31,7 @@ export default function MultiStepForm() {
   }
 
   function openModal() {
+    console.log("open modal")
     setShowModal(true);
   }
 

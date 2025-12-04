@@ -47,3 +47,19 @@ export type formData = {
   projectType: ProjectType | "",
   extraDetails: string
 }
+
+export function formatPhoneBR(value: string) {
+  value = value.replace(/\D/g, '');
+
+  if (value.length > 11) value = value.slice(0, 11);
+
+  if (value.length <= 2 && value.length !== 0 ) {
+    return `(${value}`;
+  }
+
+  if (value.length <= 7) {
+    return `(${value.slice(0,2)}) ${value.slice(2)}`;
+  }
+
+  return `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+}

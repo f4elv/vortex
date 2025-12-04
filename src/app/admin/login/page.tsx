@@ -22,7 +22,9 @@ export default function Page() {
       localStorage.setItem("access_token", res.data.access_token);
       console.log(res.data.access_token)
       router.push("/admin");
+      console.log(form)
     } catch (err) {
+      console.log(err)
       alert("Credenciais inválidas");
     } finally {
       setLoading(false);
